@@ -10,10 +10,10 @@ const userSchema = new Schema({
     type: String,
     required: true,
   },
-  phoneNumber: {
-    type: Number,
-    required: true,
-  },
+  // phoneNumber: {
+  //   type: Number,
+  //   required: true,
+  // },
   photoUrl: {
     type: String,
     required: true,
