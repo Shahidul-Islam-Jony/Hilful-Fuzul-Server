@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 const { Schema } = mongoose;
 
 const userSchema = new Schema({
@@ -19,6 +19,10 @@ const userSchema = new Schema({
     required: true,
   },
   type: {
+    type: String,
+    required: true,
+  },
+  uid: {
     type: String,
     required: true,
   },

@@ -4,25 +4,21 @@ const cors = require("cors");
 const app = express();
 app.use(
   cors({
-    origin: ["http://localhost:5173"],
+    origin: [
+      "http://localhost:5173",
+      "https://hilful-fuzul-shanti-songho.web.app",
+      "https://hilful-fuzul-shanti-songho.firebaseapp.com",
+    ],
     credentials: true,
   })
 );
 app.use(express.json());
 
-
-
 // Router integration
 const Users = require("./routes/Users/usersRoute");
 
-
-
 // calling router
 app.use(Users);
-
-
-
-
 
 // basic setup
 app.get("/", (req, res) => {
