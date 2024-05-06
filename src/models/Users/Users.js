@@ -26,15 +26,7 @@ const userSchema = new Schema({
     type: String,
     required: true,
   },
-});
-
-const Users = mongoose.model("users", userSchema); //collection name 'users'
-module.exports = Users;
-
-//  Update user as member
-
-userSchema.add({
-  father: {
+  father: {           // update user as member
     type: String,
     required: true,
   },
@@ -51,3 +43,27 @@ userSchema.add({
     required: true,
   },
 });
+
+const Users = mongoose.model("users", userSchema); //collection name 'users'
+module.exports = Users;
+
+//  Update user as member
+
+// userSchema.add({
+//   father: {
+//     type: String,
+//     required: true,
+//   },
+//   phone: {
+//     type: Number,
+//     required: true,
+//   },
+//   village: {
+//     type: String,
+//     required: true,
+//   },
+//   divission: {
+//     type: String,
+//     required: true,
+//   },
+// });
