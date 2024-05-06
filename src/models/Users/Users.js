@@ -30,3 +30,24 @@ const userSchema = new Schema({
 
 const Users = mongoose.model("users", userSchema); //collection name 'users'
 module.exports = Users;
+
+//  Update user as member
+
+userSchema.add({
+  father: {
+    type: String,
+    required: true,
+  },
+  phone: {
+    type: Number,
+    required: true,
+  },
+  village: {
+    type: String,
+    required: true,
+  },
+  divission: {
+    type: String,
+    required: true,
+  },
+});

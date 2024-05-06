@@ -1,5 +1,4 @@
 const Users = require("../../models/Users/Users");
-const mongoose = require("mongoose");
 
 const singleUserApi = async (req, res) => {
   const uid = req.params.uid;
