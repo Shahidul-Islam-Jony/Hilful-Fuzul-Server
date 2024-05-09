@@ -1,4 +1,5 @@
 const Money = require("../../models/AddMoney/AddMoney");
+const AddCost = require("../../models/AddCost/AddCost");
 
 const TotalMoney = async (req, res) => {
   try {
@@ -13,6 +14,15 @@ const TotalMoney = async (req, res) => {
     });
 
     //   console.log(totalMoney);
+
+    const benifitedUsers = await AddCost.find();
+    // console.log(benifitedUsers);
+    benifitedUsers.forEach((user) => {
+      totalCost += user?.money;
+    });
+    // console.log(totalCost);
+
+    totalMoney -= totalCost;
 
     res.send({ totalMoney, totalCost });
   } catch (err) {
