@@ -16,9 +16,11 @@ app.use(express.json());
 
 // Router integration
 const Users = require("./routes/Users/usersRoute");
+const Money = require("./routes/Money/moneyRoute");
 
 // calling router
 app.use(Users);
+app.use(Money);
 
 // basic setup
 app.get("/", (req, res) => {
