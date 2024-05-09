@@ -1,5 +1,4 @@
 const Money = require("../../models/AddMoney/AddMoney");
-// const Users = require("../../models/Users/Users");
 
 const addMoneyApi = async (req, res) => {
   const userInfo = req.body;
@@ -27,7 +26,8 @@ const addMoneyApi = async (req, res) => {
         },
       }
     );
-    console.log(result);
+    // console.log(result);
+    res.send(result);
   }
 };
 

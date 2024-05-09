@@ -17,10 +17,12 @@ app.use(express.json());
 // Router integration
 const Users = require("./routes/Users/usersRoute");
 const Money = require("./routes/Money/moneyRoute");
+const totalMoney = require("./routes/TotalMoney/totalMoneyRoute");
 
 // calling router
 app.use(Users);
 app.use(Money);
+app.use(totalMoney);
 
 // basic setup
 app.get("/", (req, res) => {
