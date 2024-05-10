@@ -10,6 +10,13 @@ const costSchema = new Schema({
     type: String,
     required: true,
   },
+  items: {
+    type: String,
+    required: true,
+  },
+  itemsPicture: {
+    type: String,
+  },
   divission: {
     type: String,
     required: true,
