@@ -22,7 +22,7 @@ const addMoneyApi = async (req, res) => {
       return res.send(existingUser);
     }
   } catch (error) {
-    console.error("Error in addMoneyApi:", error);
+    // console.error("Error in addMoneyApi:", error);
     return res.status(500).send({ error: "Internal server error" });
   }
 };
