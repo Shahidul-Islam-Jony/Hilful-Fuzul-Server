@@ -5,7 +5,7 @@ const allUsersApi = async(req,res)=>{
     const size = parseInt(req.query.size);
     // console.log(page,size);
     const result = await Users.find().skip(page*size).limit(size);
-    console.log(result);
+    // console.log(result);
     res.send(result);
 }
 
