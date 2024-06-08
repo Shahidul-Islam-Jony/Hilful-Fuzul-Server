@@ -1,13 +1,12 @@
 const Users = require("../../models/Users/Users");
 
-const allUsersApi = async (req, res) => {
-  const type = req.params.type;
-  //   console.log(type);
-  if (type === "member") {
-    const query = { type: { $ne: "user" } };    // jader type user na tader k khujbe
-    const result = await Users.find(query);
+const allUsersApi = async(req,res)=>{
+    const page = parseInt(req.query.page);
+    const size = parseInt(req.query.size);
+    // console.log(page,size);
+    const result = await Users.find().skip(page*size).limit(size);
+    console.log(result);
     res.send(result);
-  }
-};
+}
 
 module.exports = allUsersApi;
