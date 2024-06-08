@@ -9,11 +9,13 @@ const SearchMember = require("../../api/SearchMember/SearchMember");
 const TotalUsersCountApi = require("../../api/TotalUsersCountApi/TotalUsersCountApi");
 const SearchUsersApi = require("../../api/SearchUsersApi/SearchUsersApi");
 const UpdateUserType = require("../../api/UpdateUserType/UpdateUserType");
+const DeleteUser = require("../../api/DeleteUser/DeleteUser");
 const router = express.Router();
 
 router.post("/users", users); // adding new user
 router.get("/single/user/:uid", singleUserApi); //getting single user;
 router.patch("/update/user/type",UpdateUserType);     // update user type
+router.delete('/delete/user/:uid',DeleteUser);     // delete a user
 
 // Members Route
 router.patch("/become/member/:uid", becomeMember);
