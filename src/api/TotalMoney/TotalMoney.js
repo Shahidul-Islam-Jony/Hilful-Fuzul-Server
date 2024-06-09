@@ -5,7 +5,7 @@ const TotalMoney = async (req, res) => {
   try {
     const uId = req.params?.uid;
     // console.log(uId);
-    if (uId !== "all") {      // find own money details
+    if (uId !== "all") {      // find own money details by uid
       const query = {uid:uId};
       const ownMoney = await Money.find(query);
       // console.log(ownMoney);
@@ -13,7 +13,7 @@ const TotalMoney = async (req, res) => {
 
     } else {          // get all money details
       const users = await Money.find();
-      console.log(users);
+      // console.log(users);
       let totalMoney = 0;
       let totalCost = 0;
       users.forEach((user) => {

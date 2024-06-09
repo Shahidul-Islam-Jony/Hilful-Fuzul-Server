@@ -22,6 +22,7 @@ const Money = require("./routes/Money/moneyRoute");
 const totalMoney = require("./routes/TotalMoney/totalMoneyRoute");
 const totalCost = require("./routes/TotalCost/TotalCostRoute");
 const updateEmail = require("./routes/UpdateEmailRoute/UpdateEmailRoute");
+const benifitedPeople = require("./routes/BenifitedPeopleRoute/BenifitedPeopleRoute");
 
 // calling router
 app.use(Users);
@@ -29,6 +30,8 @@ app.use(Money);
 app.use(totalMoney);
 app.use(totalCost);
 app.use(updateEmail);
+app.use(benifitedPeople);
+
 
 // basic setup
 app.get("/", (req, res) => {
