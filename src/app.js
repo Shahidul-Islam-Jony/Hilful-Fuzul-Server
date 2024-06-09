@@ -19,7 +19,7 @@ const Users = require("./routes/Users/usersRoute");
 const Money = require("./routes/Money/moneyRoute");
 const totalMoney = require("./routes/TotalMoney/totalMoneyRoute");
 const totalCost = require("./routes/TotalCost/TotalCostRoute");
-const updateEmail = require("./routes/UpdateEmailRoute/UpdateEmailRoute")
+const updateEmail = require("./routes/UpdateEmailRoute/UpdateEmailRoute");
 
 // calling router
 app.use(Users);
