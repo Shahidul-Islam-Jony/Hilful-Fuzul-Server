@@ -8,6 +8,8 @@ app.use(
       "http://localhost:5173",
       "https://hilful-fuzul-shanti-songho.web.app",
       "https://hilful-fuzul-shanti-songho.firebaseapp.com",
+      "http://localhost",
+      "file://"
     ],
     credentials: true,
   })

@@ -2,7 +2,7 @@ const Users = require("../../models/Users/Users");
 
 const TotalUsersCountApi = async (req, res) => {
   const count = await Users.estimatedDocumentCount();
-    console.log(count);
+    // console.log(count);
   res.send({ count });
 };
 
