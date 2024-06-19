@@ -22,7 +22,8 @@ const userSchema = new Schema({
     type: String,
     required: true,
   },
-  father: {           // update user as member
+  father: {
+    // update user as member
     type: String,
     required: true,
   },
@@ -42,6 +43,18 @@ const userSchema = new Schema({
 
 const Users = mongoose.model("users", userSchema); //collection name 'users'
 module.exports = Users;
+
+// update as admin
+userSchema.add({
+  cash: {
+    type: Number,
+    required: true,
+  },
+  cost: {
+    type: Number,
+    required: true,
+  },
+});
 
 //  Update user as member
 
