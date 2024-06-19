@@ -29,6 +29,14 @@ const costSchema = new Schema({
     type: Number,
     required: true,
   },
+  addedBy: {
+    type: String,
+    required: true,
+  },
+  uid: {
+    type: String,
+    required: true,
+  },
 });
 
 const TotalCost = mongoose.model("TotalCost", costSchema); //collection name 'money'
