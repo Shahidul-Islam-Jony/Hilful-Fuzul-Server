@@ -10,6 +10,7 @@ const TotalUsersCountApi = require("../../api/TotalUsersCountApi/TotalUsersCount
 const SearchUsersApi = require("../../api/SearchUsersApi/SearchUsersApi");
 const UpdateUserType = require("../../api/UpdateUserType/UpdateUserType");
 const DeleteUser = require("../../api/DeleteUser/DeleteUser");
+const AllAdminsApi = require("../../api/AllAdminsApi/AllAdminsApi");
 const router = express.Router();
 
 router.post("/users", users); // adding new user
@@ -27,6 +28,9 @@ router.get('/search/member',SearchMember);       // search specific member by na
 router.get("/total/users/count",TotalUsersCountApi);   //count total users
 router.get("/all/users", allUsersApi); //getting all users;
 router.get('/search/users',SearchUsersApi);     //search specific users
+
+// Getting all admins
+router.get("/all/admins",AllAdminsApi);
 
 
 module.exports = router;
