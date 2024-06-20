@@ -39,22 +39,36 @@ const userSchema = new Schema({
     type: String,
     required: true,
   },
+  cash: {
+    type: Number,
+    default: 0,
+    // required: true,
+  },
+  cost: {
+    type: Number,
+    default: 0,
+    // required: true,
+  },
+  transfer:{
+    type:Number,
+    default:0,
+  }
 });
 
 const Users = mongoose.model("users", userSchema); //collection name 'users'
 module.exports = Users;
 
 // update as admin
-userSchema.add({
-  cash: {
-    type: Number,
-    required: true,
-  },
-  cost: {
-    type: Number,
-    required: true,
-  },
-});
+// userSchema.add({
+//   cash: {
+//     type: Number,
+//     required: true,
+//   },
+//   cost: {
+//     type: Number,
+//     required: true,
+//   },
+// });
 
 //  Update user as member
 
